@@ -1,18 +1,25 @@
 %%% Setup %%%
 \documentclass{article}
-\title{My Title}
+\title{Review of NVIDIA Tesla: A Unified Graphics and Computing Architecture \cite{Tesla}}
 \author{Riley Wood}
 \begin{document}
 \maketitle
 
 %%% The Meat %%%
 
-\section*{First Section}
-Body of section goes here
+\section*{Key Ideas}
+The authors open by discussing the evolution of two different types of GPU cores: vertex and pixel processors. Each one was initially optimized differently, but lately their designs have been converging. The authors cite how this convergence has led to an increase in design complexity that could be mitigated by merging the two processor types, which is just what the Tesla architecture does. Additionally, different workloads will demand each processor resource in varying proportions,
+meaning it is difficult to ensure that the load on processors is always balanced -- we would prefer to dynamically balance load. They cite these motivators as reasons why they unify the two processor types as one in the Tesla. From the block diagram, one can see blocks dedicated to managing the distribution of pixel and vertex work to the same set of processors.
+
+\section*{Review}
+
+
+\section*{Conclusion}
+
 
 %%% References %%%
 \bibliographystyle{unsrt}
-\bibliography{mybib}
+\bibliography{4-6}
 
 %%% The End %%%
 \end{document}
