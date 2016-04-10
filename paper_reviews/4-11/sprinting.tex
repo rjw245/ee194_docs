@@ -1,0 +1,37 @@
+%%% Setup %%%
+\documentclass{article}
+\title{My Title}
+\author{Riley Wood}
+\begin{document}
+\maketitle
+
+%%% The Meat %%%
+
+\section*{Key Ideas} 
+As transistors keep shrinking but chip voltage doesn't, power density begins to
+increase. This trend has been coined "dark silicon" because it more and more
+transistors on chip must remain unpowered or "dark" as they get smaller. This
+impacts mobile devices especially which are more difficult to cool. The paper
+discusses one way of getting around the utilization wall imposed by power
+limitations: exceed the thermal limits only in short bursts to get more work
+done per unit time, when needed. They mention interactive applications as their
+main target for improvement. These applications generally spend a lot of time
+idle, waiting for user input, punctuated by bursts of computation when input is
+received. They discuss implications of computational sprinting for thermal,
+electrical, and software design.
+
+\section*{Review}
+I want to see proof that mobile applications do not demand extended periods of
+high performance. That they would benefit from only short bursts.
+
+\section*{Conclusion}
+Body of section goes here
+
+
+
+%%% References %%%
+\bibliographystyle{unsrt}
+\bibliography{mybib}
+
+%%% The End %%%
+\end{document}
