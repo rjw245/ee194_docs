@@ -1,0 +1,34 @@
+%%% Setup %%%
+\documentclass{article}
+\title{Review of ``Drowsy Caches: Simple Techniques for Reducing Leakage
+Power''~\cite{drowsy}}
+\author{Riley Wood}
+\begin{document}
+\maketitle
+
+%%% The Meat %%%
+
+\section*{Key Ideas}
+These researchers seek to lower the power consumption of microprocessors. They
+target on-chip caches, which consume a large amount of power, for improvement.
+They seek to exploit locality to reduce power consumption by ``dimming'' areas
+of the cache that are not being heavily accessed. They claim to reduce the total
+energy consumed by caches by 50-75\% with no more than a 1\% decrease in
+performance.
+
+\section*{Review}
+The claim made in their abstract is very impressive. 50-75\% is a large energy
+savings with such a small impact to performance. But they do not state the
+impact this will have on the energy consumption of the entire system. If making
+the caches more energy efficient has only a marginal effect on the overall
+energy consumption of the computer, then the work is not very useful.
+
+\section*{Conclusion}
+Body of section goes here
+
+%%% References %%%
+\bibliographystyle{unsrt}
+\bibliography{drowsy}
+
+%%% The End %%%
+\end{document}
