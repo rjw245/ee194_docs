@@ -1,5 +1,6 @@
 %%% Setup %%%
 \documentclass{article}
+\usepackage{fullpage}
 \title{Review of ``Drowsy Caches: Simple Techniques for Reducing Leakage
 Power''~\cite{drowsy}}
 \author{Riley Wood}
@@ -18,13 +19,28 @@ performance.
 
 \section*{Review}
 The claim made in their abstract is very impressive. 50-75\% is a large energy
-savings with such a small impact to performance. But they do not state the
+savings with such a small impact to performance (1\%). But they do not state the
 impact this will have on the energy consumption of the entire system. If making
 the caches more energy efficient has only a marginal effect on the overall
-energy consumption of the computer, then the work is not very useful.
+energy consumption of the computer, then the work is not very useful. They
+evaluate their design thoroughly by testing many design corners, down
+to whether or not to put tags into drowsy mode along with data. I was also
+impressed at the degree to which they evaluated potential weaknesses in their
+novel designs, such as the DVS drowsy memory cell schematic. They saw the
+potential for memory corruption due to crosstalk, tested if their design was
+susceptible, and presented the results that prove it is not. This is very
+convincing.
 
 \section*{Conclusion}
-Body of section goes here
+Given the degree to which they tested their designs and explored every design
+corner, it's clear that a lot of thought was put into this project. My main
+concern remains that I haven't been convinced that making caches more power
+efficient will significantly benefit the whole system. While my searches online
+reinforce the idea that caches consume a large fraction of the total chip power,
+I would like to see measurements that make this clear. But overall, I agree with
+the approach this paper takes to reducing power consumption. At the time, DVFS
+was beginning to be applied to processor cores. It makes a lot of sense to extend
+this technique (at least the voltage scaling) to caches.
 
 %%% References %%%
 \bibliographystyle{unsrt}
