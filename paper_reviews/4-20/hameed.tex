@@ -1,0 +1,38 @@
+%%% Setup %%%
+\documentclass{article}
+\title{Review of ``Understanding Sources of Inefficiency in General-Purpose
+Chips'' \cite{Hameed:2010}}
+\author{Riley Wood}
+\begin{document}
+\maketitle
+
+%%% The Meat %%%
+
+\section*{Key Ideas}
+The paper seeks to explore how specialization can benefit a chip multiprocessor
+(CMP) in terms of performance and power consumption. It is generally known that a
+specially-designed ASIC will outperform a CMP in these areas, but the paper aims
+to point out exactly why, in an effort to appropriate the most beneficial
+characteristics for new CMP designs. They use H.264 video encoding as their
+primary application for demonstration. H.264 video encoding is something which
+is typically carried out by an ASIC rather than a general-purpose processor
+because the ASIC ends up being much better in all respects (power, area, and
+performance). They begin with an implementation of H.264 on a general processor
+that lags behind the ASIC drastically. They gradually apply improvements to the
+CMP which incorporate aspects of the ASIC to improve performance and
+resource consumption of the CMP. They conclude that reducing the energy cost of
+CMPs is difficult, as energy overhead will tend to dominate.
+
+\section*{Review}
+I believe they selected an appropriate application for testing, since H.264
+video encoding is today widely implemented using hardware acceleration.
+
+\section*{Conclusion}
+
+
+%%% References %%%
+\bibliographystyle{hameed}
+\bibliography{mybib}
+
+%%% The End %%%
+\end{document}
