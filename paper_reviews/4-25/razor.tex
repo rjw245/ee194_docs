@@ -1,0 +1,44 @@
+%%% Setup %%%
+\documentclass{article}
+\title{Review of ``Razor: a low-power pipeline based on circuit-level timing speculation''~\cite{razor}}
+\author{Riley Wood}
+\begin{document}
+\maketitle
+
+%%% The Meat %%%
+\section*{Key Ideas}
+The researchers seek to improve the power efficiency of computers by
+improving techniques for voltage scaling. Standard techniques are too
+conservative and do not lower the voltage past the level needed for the most
+power-hungry instructions. The result is that the voltage is higher than it
+needs to be the majority of the time. This paper evaluates a method of
+dipping the voltage even lower and correcting the occasional errors that
+will pop up. They propose having a latch that is clocked a bit late. In the event that
+an instruction does not make timing due to the voltage being too low, this latch
+will contain the correct result, since it has had more time for the input to
+stabilize, and it can be used to restore the correct result to the pipeline.
+This requires a one-cycle delay to allow the system to recuperate. The system
+keeps track at all times of how frequently errors have been occurring. The
+voltage is scaled appropriately so that the number of errors per unit time sits
+at an acceptable level.
+
+
+\section*{Review}
+One concern I have when reading their proposal is how they are able to avoid
+any sort of ``point of no return'' which would occur when the voltage dips so
+low that the Razor latch can no longer make timing. One would hope that
+whatever controls they implement on the voltage scaling would scale the
+voltage up long before reaching this point, yet they don't talk much about how
+tracking and adjusting for pipeline errors would be implemented. In my opinion,
+this is a necessary detail to touch upon. The razor latch isn't a believable solution
+without a good control scheme to prevent its dangers.
+
+
+\section*{Conclusions}
+
+%%% References %%%
+\bibliographystyle{unsrt}
+\bibliography{razor}
+
+%%% The End %%%
+\end{document}
