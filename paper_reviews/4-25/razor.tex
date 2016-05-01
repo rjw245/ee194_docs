@@ -1,9 +1,12 @@
 %%% Setup %%%
 \documentclass{article}
+\usepackage{fullpage}
 \title{Review of ``Razor: a low-power pipeline based on circuit-level timing speculation''~\cite{razor}}
 \author{Riley Wood}
 \begin{document}
 \maketitle
+
+Using six late days!
 
 %%% The Meat %%%
 \section*{Key Ideas}
@@ -35,6 +38,13 @@ without a good control scheme to prevent its dangers.
 
 
 \section*{Conclusions}
+While this paper takes an interesting approach to power efficiency, their
+methods have not been fully described. They detail the design of the razor latch
+and its role in the system, and leave the voltage level control system as a
+blackbox for future work. But the effectiveness of the control system for
+voltage has bearing on whether or not the razor latch will work, so I am left
+unsatisfied with the work they present given the potential pitfalls of such a
+design.
 
 %%% References %%%
 \bibliographystyle{unsrt}
