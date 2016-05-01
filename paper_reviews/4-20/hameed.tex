@@ -1,12 +1,14 @@
 %%% Setup %%%
 \documentclass{article}
+\usepackage{fullpage}
 \title{Review of ``Understanding Sources of Inefficiency in General-Purpose
-Chips'' \cite{Hameed:2010}}
+Chips'' \cite{review}}
 \author{Riley Wood}
 \begin{document}
 \maketitle
 
 %%% The Meat %%%
+Using three late days!
 
 \section*{Key Ideas}
 The paper seeks to explore how specialization can benefit a chip multiprocessor
@@ -25,14 +27,29 @@ CMPs is difficult, as energy overhead will tend to dominate.
 
 \section*{Review}
 I believe they selected an appropriate application for testing, since H.264
-video encoding is today widely implemented using hardware acceleration.
+video encoding is today widely implemented using hardware acceleration. However,
+the fact that industry has chosen hardware acceleration over specialized
+processors means that industry trends have not aligned with the paper's
+conclusion: that specialization of the processor itself is the best way to
+maximize performance given energy constraints. I don't think the paper addresses
+the hardware acceleration school of thought well enough. In the introduction,
+the authors mention that work is being done to make generating customized
+hardware easier. They never weigh this option against augmenting the processor.
+In fact, in their conclusion, they admit that extending the processor is
+difficult and additional tools will be needed if this is to be made easy for
+designers. So this approach is no easier than custom designing hardware.
 
 \section*{Conclusion}
-
+This paper offers a lot of insight into the ways in which ASICs outperform
+processors in ways that are very relevant to today's trend toward power
+efficiency. Unfortunately, I disagree with their claim that extending the
+processor with specialized functionality is the best approach to averting the
+utilization wall. I am not convinced that this beats integrating what are
+effectively ASICs into the chip die as accelerators.
 
 %%% References %%%
-\bibliographystyle{hameed}
-\bibliography{mybib}
+\bibliographystyle{unsrt}
+\bibliography{hameed}
 
 %%% The End %%%
 \end{document}
